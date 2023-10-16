@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Collage</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        .collage {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            height: 100%;
+            gap: 10px;
+        }
+
+        .collage img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .double-wide {
+            grid-column: span 2;
+        }
+
+        .double-tall {
+            grid-row: span 2;
+        }
+
+        .big {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="collage">
+	<img src="images/PXL_20230903_151035678.jpg" alt="Large Image 1" class="double-wide">
+    <img src="images/PXL_20230903_151038549.jpg" alt="Medium Image 1" class="double-wide">
+    <img src="images/PXL_20230903_151053512.jpg" alt="Small Image 1" class="double-wide">
+    <img src="images/PXL_20231001_161222469.jpg" alt="Small Image 2" >
+    <img src="images/PXL_20231001_161239135.jpg" alt="Medium Image 2">
+    <img src="images/dc382952ec22e4e2524187f50d66dbb25eb38f341e795a5ad1a8af179b73.jpeg" alt="Large Image 2">
+    <img src="images/IMG-20230917-WA0001.jpg" alt="Large Image 3" >
+	<img src="images/IMG-20230917-WA0002.jpg" alt="Large Image 4">
+	<img src="images/IMG-20231002-WA0011.jpg" alt="Large Image 5">
+	<img src="images/PXL_20230827_152236282.jpg" alt="Large Image 6" >
+	<img src="images/PXL_20230827_152236956.jpg" alt="Large Image 7" class="double-tall">
+	<img src="images/PXL_20230827_152242267.jpg" alt="Large Image 8" >
+	<img src="images/PXL_20230827_152243904.jpg" alt="Large Image 9" >
+	<img src="images/PXL_20230827_164122738.jpg"alt="Large Image 10">
+	<img src="images/PXL_20230903_074557700.jpg" alt="Large Image 11" >
+</div>
+
+</body>
+</html>

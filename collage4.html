@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meine Webseite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden; /* Verhindert das Scrollen des gesamten Seiteninhalts */
+        }
+        header {
+            background-color: #C8A2C8; /* Fliederfarbener Header */
+            color: #ffffff; /* Textfarbe für den Header */
+            padding: 20px;
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            z-index: 2; /* Höherer Wert, um den Header über dem iframe zu positionieren */
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            position: fixed; /* Fixiert das iframe auf der Seite */
+            z-index: 1; /* Niedrigerer Wert, um den iframe unter dem Header zu positionieren */
+        }
+        
+        .banner {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: #D8BFD8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 70px;
+            border-top: 2px solid #ccc;
+			z-index: 2;
+        }
+        .input-field {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .input-field:focus {
+            border-color: #66afe9;
+        }
+        .check-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #5A5A5A;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .check-button:hover {
+            background-color: #005f5f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Antonias Geburtstagsrätsel</h1>
+    </header>
+
+    <iframe src="https://www.xwords-generator.de/de/solve/ha8r2"></iframe>
+
+    <!-- Banner für Glückwunsch-Überprüfung -->
+    <div class="banner">
+        <input class="input-field" id="textInput" type="text" placeholder="Lösungswort">
+        <button class="check-button" onclick="checkForGlueckwunsch()">Überprüfen</button>
+    </div>
+
+    <script>
+        function checkForGlueckwunsch() {
+            var inputText = document.getElementById("textInput").value.toLowerCase();
+            if (inputText.includes("glueckwunsch")) {
+                alert("Herzlichen Glückwunsch! Der Pin ist: igbe");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collage 2</title>
+<style>
+    body, html { 
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        font-family: 'Arial', sans-serif;
+        background-image: linear-gradient(rgba(216, 191, 216, 0.7), rgba(216, 191, 216, 0.7)), url("images/MonkeyBarPosition.png"); /* Add your image path */
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+
+    header {
+        padding: 20px;
+        background-color: #D8BFD8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #ccc; /* Adding a border */
+    }
+
+    .header-content {
+        width: 50%;
+        display: flex;
+        align-items: center;
+    }
+
+    .send-button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #5A5A5A;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease; /* Transition for smooth color change */
+    }
+
+    .send-button:hover {
+        background-color: #005f5f;
+    }
+
+    .input-field {
+        width: 70%; /* Adjust width */
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px; /* Rounded corners */
+        border: 1px solid #ccc; /* Border color */
+        outline: none; /* Remove outline */
+        transition: border-color 0.3s ease; /* Transition for smooth color change */
+    }
+
+    .input-field:focus {
+        border-color: #66afe9; /* Border color on focus */
+    }
+
+    .image-section {
+        display: flex;
+        justify-content: space-around; /* Centering images */
+        padding: 20px;
+    }
+
+    .image-section img {
+        object-fit: contain; /* Maintain aspect ratio */
+        max-width: 45%; /* Adjust width */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 10px; /* Rounded corners */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+    }
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="header-content">
+        <input type="text" class="input-field" id="inputField" placeholder="Wo befinden wir uns...">
+        <button class="send-button" onclick="checkInput()">Send</button>
+    </div>
+</header>
+
+<div class="image-section">
+    <img src="images/MonkeyBar.png" alt="Photo 1">
+    <img src="images/MonkeyBar2.png" alt="Photo 2">
+</div>
+
+<script>
+    function checkInput() {
+        var inputField = document.getElementById('inputField');
+        var inputValue = inputField.value.toLowerCase();  // Convert input to lowercase for case-insensitive matching
+
+        if (inputValue.includes('monkey')) {
+            alert('Unser Date ist am 28.10. um 20Uhr am eingetragenen Ort <3');
+        }
+    }
+</script>
+
+</body>
+</html>
