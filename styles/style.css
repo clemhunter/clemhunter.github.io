@@ -94,7 +94,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: stretch;  /* Ensure each container stretches to the same height */
-    min-height: 54vh;
+    min-height: 34em;
 	padding-bottom: 20px;
 }
 
